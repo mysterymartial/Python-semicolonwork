@@ -26,7 +26,7 @@ while (!sentinel.equals("D")){
 
 		case "B":
 
-			 System.out.println("Enter the amount you want to deposit");
+			 System.out.println("Enter the amount you want to withdrawl");
 			 double withdrawl= sc.nextDouble();
 			 if(balance == 0 || withdrawl > balance){
 				System.out.println("You cannot withdrawal");

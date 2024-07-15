@@ -20,13 +20,22 @@ while alphabet != sentinel:
 		case 'B':
 
 			withdraw = int (input("Enter the amount you want to withdrwal\n"))
-			balance = balance  - withdraw
+			if balance == 0 or withdraw > balance:
+					print("insufficient funds")
+			else:
+				balance = balance  - withdraw
 
 		case 'C':
-                  	  print("Your balance is ",  balance)
+		
+			 if balance == 0:
+					print("insufficient funds")
+
+			 else:
+		
+                  	  		print("Your balance is ",  balance)
 
 		
 		
 
 
- 
+ 	
