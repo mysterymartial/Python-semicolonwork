@@ -24,14 +24,14 @@ public class Guessgame{
 		if(gamer == output){
 
 			System.out.println("Congratulation you gussed right");
-				factor1++;
+				
 
 }
 
 
 		else if(gamer > output){
 				System.out.println("Your guess is too high");
-					factor2++;
+					factor1++;
 
 }
 
@@ -40,7 +40,7 @@ public class Guessgame{
 
 
 			System.out.println("Your guess is too low");
-
+					factor2++;
 		}
 			
 			System.out.println("Enter any number to continue and -1 to exist");
