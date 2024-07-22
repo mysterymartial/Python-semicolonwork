@@ -3,43 +3,43 @@ print("Welcome to my quiz app")
 
 
 def problems():
-	collect = ["calculate 2+2 =", "calculate 2 +1", "calculate 2 x3", "calculate 1+1:", "calculate 4+4", "calculate 7 x 1", "calculate 1 x 10:", "what number is after 10:", "calculate 3x3:", "calculate for x in 2x + 2=0"]
+	collect = ["calculate 2+2 =", "calculate 2 +1", "calculate 2 x3", "calculate 1+1:", "calculate 4+4", "calculate 7 x 1", "calculate 1 x 10:", "what number is after 10", "calculate 3x3", "calculate for x in 2x + 2=0"]
 	random_quiz= random.choice(collect)
 	return random_quiz
 
 def result(attempt,question):
-	if question == "solve 2+2 =" :
+	if question == "calculate 2+2 =" :
 		if attempt == 4:
 			return "passed"
 		else:
 			return "falied"
 
-	elif question == "solve 2+1" :
+	elif question == "calculate 2+1" :
 		if attempt == 3:
 			return "passed"
 		else:
 			return "falied"
-	elif question == "solve 2x3":
+	elif question == "calculate 2x3":
 		if attempt == 6:
 			return "passed"
 		else:
 			return "failed"
-	elif question == "solve 1+1":
+	elif question == "calculate 1+1":
 		if attempt == 2:
 			return "passed"
 		else:
 			return "falied" 
-	elif question == "solve 4+4":
+	elif question == "calculate 4+4":
 		if attempt == 8:
 			return "passed"
 		else:
 			return "failed"
-	elif question == "solve 7 x 1":
+	elif question == "calculate 7 x 1":
 		if attempt == 7:
 			return "passed"
 		else:
 			return "failed"
-	elif question == "solve 1 x 10":
+	elif question == "calculate 1 x 10":
 		if attempt == 10:
 			return "passed"
 		else:
@@ -49,12 +49,12 @@ def result(attempt,question):
 			return "passed"
 		else:
 			return "failed"
-	elif question == "solve 3 x 3":
+	elif question == "calculate 3 x 3":
 		if attempt == 6:
 			return "passed"
 		else:
 			return "failed"
-	elif question == "solve for x in 2x + 2 = 0":
+	elif question == "calculate for x in 2x + 2 = 0":
 		if attempt == 1:
 			return "passed"
 		else:
@@ -69,14 +69,14 @@ for attempt in range(1,11):
 	print(question)
 	question_attempt = 0
 	while question_attempt < 10:
-		question_answer= int(input("Enter your answer:\n"))
-		computer_feedback = result(attempt,question_answer)
-		print("question", computer_feedback)
+		attempt= int(input("Enter your answer:\n"))
+		computer_feedback = result(attempt,question)
+		print("Thanks",  computer_feedback)
 		
 
 
 		if computer_feedback == "passed":
-			question_attempt == 10
+			continue
 			total_question_passed = total_question_passed + 1
 		else:
 			question_attempt = question_attempt + 1

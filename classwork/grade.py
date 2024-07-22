@@ -11,4 +11,4 @@ elif score < 50 and score >= 40:
 	print("Your garde is D")
 
 else:
-	print("your grade is F")
+	print("your grade is F you are a stupid boy")
