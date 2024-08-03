@@ -10,15 +10,17 @@ def reversed(number):
 
 def palindrome(number):
 
-	original_number = number
+
 	reverse = 0
-	while number > 0:
+	original_number = number
+	while number!= 0:
 		reverse = reverse * 10 + (number%10)
 		number = number // 10
-		if number == reverse:
-			return f"your number is palindrome"
-		else:
-			return f"your number is not a palindrome"
+		
+	if original_number == reverse:
+		return f"your number is palindrome"
+	else:
+		return f"your number is not a palindrome"
 
 
 	
