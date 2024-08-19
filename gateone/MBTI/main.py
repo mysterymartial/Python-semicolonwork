@@ -5,9 +5,14 @@ for type in my_question:
 
 	print(type)
 	selection = input("Enter A or B \n")
-	if selection != "A" and selection != "B":
-		print("Invalid input enter A or B")
-		break 
+	if selection.upper() != "A" and selection.upper() != "B":
+		flag = True
+		while   flag: 
+		
+			selection = input("Enter A or B \n")
+			if selection.upper() == "A" or selection.upper() == "B":
+				flag = False
+		 
 	answer += selection
 
 first_response = mbti.get_first_response(answer)
